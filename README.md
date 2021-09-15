@@ -1,6 +1,6 @@
 # stripe-subscription
 
-First of All # Create plan in strip account
+First of All  Create plan in strip account
 Then past Stripe Credentials in .env file and plan_id
 this is only for one plan subscription but if you have 2,3 or more plan then make a table in database fetch plan from it and pass this plan
 where i am passing plan_id in each place
@@ -16,7 +16,7 @@ STRIPE_PLAN_PRICE=price_1I demo is here(these are not correct)
 
 
 
-#Step1 install cachier 
+# Step1 install cachier 
 
 composer require laravel/cashier
 
@@ -27,7 +27,7 @@ composer require laravel/cashier
     $table->string('card_last_four')->nullable();
     $table->timestamp('trial_ends_at')->nullable();
 
-#step 3 subscription.blade.php
+# step 3 subscription.blade.php
 
 <!DOCTYPE html>
 <html lang="en">
@@ -261,7 +261,8 @@ $(document).ready(function() {
 </body>
 </html>
 
-#step 4 past this method in your require controller
+
+# step 4 past this method in your require controller
 
 public function getStripeSubscription($request)
     {
@@ -295,7 +296,7 @@ public function getStripeSubscription($request)
 
     }
     
-    #step 5 route
+    # step 5 route
     Route::get('subscription', ['as'=>'subscription','uses'=>'HomeController@subscription']);
     Route::post('subscription', ['as'=>'post-subscription','uses'=>'HomeController@getStripeSubscription']);
 
