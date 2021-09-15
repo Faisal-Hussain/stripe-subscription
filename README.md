@@ -1,5 +1,21 @@
 # stripe-subscription
 
+First of All # Create plan in strip account
+Then past Stripe Credentials in .env file and plan_id
+this is only for one plan subscription but if you have 2,3 or more plan then make a table in database fetch plan from it and pass this plan
+where i am passing plan_id in each place
+
+i only passing plan_id in a controller function you have to past plan id according to your desire
+now past in .env file your account public key , secret and plan_id
+
+
+STRIPE_KEY=pk_test_51IQ7cFAFpOTdBwUqzuZbmN15lsrGtucmPCEV66yBot9to7jKxt253szywUu demo is here(these are not correct)
+STRIPE_SECRET=sk_test_51IQ7cFAFpOTdBwUqi5a4F19r7MbL8YfLZpCndIKX0VrqREEOdoQPPKBeW demo is here(these are not correct)
+STRIPE_PLAN_PRICE=price_1I demo is here(these are not correct)
+
+
+
+
 #Step1 install cachier 
 
 composer require laravel/cashier
